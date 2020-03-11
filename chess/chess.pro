@@ -16,11 +16,33 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    bishop.cpp \
+    emptyfield.cpp \
+    field.cpp \
+    game.cpp \
+    king.cpp \
+    knight.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    pawn.cpp \
+    piece.cpp \
+    position.cpp \
+    queen.cpp \
+    rook.cpp
 
 HEADERS += \
-    mainwindow.h
+    bishop.h \
+    emptyfield.h \
+    field.h \
+    game.h \
+    king.h \
+    knight.h \
+    mainwindow.h \
+    pawn.h \
+    piece.h \
+    position.h \
+    queen.h \
+    rook.h
 
 FORMS += \
     mainwindow.ui
@@ -29,3 +51,6 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    qtresourceexample.qrc

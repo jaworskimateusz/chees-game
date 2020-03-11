@@ -1,0 +1,20 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+    <qresource>
+        <file>img/pawn.png</file>
+        <file>img/pawn_white.png</file>
+        <file>img/bishop.png</file>
+        <file>img/bishop_white.png</file>
+        <file>img/queen.png</file>
+        <file>img/queen_white.png</file>
+        <file>img/king.png</file>
+        <file>img/king_white.png</file>
+        <file>img/rook.png</file>
+        <file>img/rook_white.png</file>
+        <file>img/horse.png</file>
+        <file>img/horse_white.png</file>
+        <file>img/left_arrow_black.png</file>
+        <file>img/right_arrow_white.png</file>
+
+    </qresource>
+</RCC>
