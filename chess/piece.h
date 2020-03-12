@@ -26,8 +26,8 @@ public:
     PieceType getPieceType();
     string getIconName();
     void setIconName(string iconName);
-    virtual vector<pair<int,int>> getAllPieceMoves();
-    virtual vector<pair<int,int>> getPossiblePieceMoves();
+    virtual vector<pair<int,int>> getAllPieceMoves() = 0;
+    virtual vector<pair<int,int>> getPossiblePieceMoves() = 0;
 
 };
 

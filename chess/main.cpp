@@ -1,6 +1,8 @@
 #include "mainwindow.h"
 
 #include <QApplication>
+#include "pawn.h"
+#include "game.h"
 
 int main(int argc, char *argv[])
 {

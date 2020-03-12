@@ -7,7 +7,6 @@
 class Pawn : public Piece {
 
 public:
-    Pawn();
     virtual vector<pair<int,int>> getAllPieceMoves() override;
     virtual vector<pair<int,int>> getPossiblePieceMoves() override;
 };

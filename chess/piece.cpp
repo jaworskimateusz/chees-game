@@ -1,12 +1,12 @@
 #include "piece.h"
 
-//Piece::Piece() {
+Piece::Piece() {
 
-//}
+}
 
-//Piece::~Piece() {
+Piece::~Piece() {
 
-//}
+}
 
 void Piece::setColor(Color color) {
     this->color = color;
