@@ -7,8 +7,9 @@
 class Pawn : public Piece {
 
 public:
-    virtual QVector<Position> getAllPieceMoves() override;
-    virtual QVector<Position> getPossiblePieceMoves() override;
+    Pawn();
+    virtual vector<pair<int,int>> getAllPieceMoves() override;
+    virtual vector<pair<int,int>> getPossiblePieceMoves() override;
 };
 
 #endif // PAWN_H

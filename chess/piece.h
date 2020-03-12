@@ -1,27 +1,33 @@
 #ifndef PIECE_H
 #define PIECE_H
 #include "position.h"
+#include "PieceType.h"
+#include "Color.h"
+#include <stdio.h>
+#include <string>
+#include <vector>
 
-#include <QString>
 
+using namespace std;
 class Piece {
 
 private:
-    QString color;
-    QString pieceType;
-    QString iconName;
+
+    Color color;
+    PieceType pieceType;
+    string iconName;
 public:
     Piece();
     ~Piece();
-    void setColor(QString color);
-    QString getColor();
-    void setPieceType(QString pieceType);
-    QString getPieceType();
-    QString getIconName();
-    void setIconName(QString iconName);
-    void displayPiece();
-    virtual QVector<Position> getAllPieceMoves();
-    virtual QVector<Position> getPossiblePieceMoves();
+    Piece(Color color, PieceType pieceType, string iconName);
+    void setColor(Color color);
+    Color getColor();
+    void setPieceType(PieceType pieceType);
+    PieceType getPieceType();
+    string getIconName();
+    void setIconName(string iconName);
+    virtual vector<pair<int,int>> getAllPieceMoves();
+    virtual vector<pair<int,int>> getPossiblePieceMoves();
 
 };
 

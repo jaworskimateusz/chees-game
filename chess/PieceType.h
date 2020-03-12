@@ -1,4 +1,8 @@
 #ifndef PIECETYPE_H
 #define PIECETYPE_H
 
+enum PieceType {
+    BISHOP, KING, KNIGHT, PAWN, QUEEN, ROOK, EMPTY_FIELD
+};
+
 #endif // PIECETYPE_H

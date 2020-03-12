@@ -2,19 +2,17 @@
 #define FIELD_H
 #include "piece.h"
 
-#include <QString>
-
 class Field {
 
 private:
-    QString color;
-    QString pieceType;
-    QString iconName;
+    Color color;
+    PieceType pieceType;
+    string iconName;
     Piece *piece;
 public:
     Field();
     ~Field();
-    void setPiece(Piece *piece, QString color, QString pieceType, QString iconName);
+    void setPiece(Piece *piece, Color color, PieceType pieceType, string iconName);
 };
 
 #endif // FIELD_H

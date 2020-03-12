@@ -27,7 +27,7 @@ MainWindow::~MainWindow() {
 void MainWindow::onFieldClick() {
     QPushButton *field = (QPushButton *)sender();
 
-    ui->Field_00->setIcon(QIcon(":/PResources/pawn.png"));
-//    qDebug(field->objectName());
+    ui->Field_00->setIcon(QIcon(":/Resources/pawn.png"));
+
 }
 

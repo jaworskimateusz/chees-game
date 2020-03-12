@@ -1,36 +1,40 @@
 #include "piece.h"
-Piece::Piece() {
 
-}
+//Piece::Piece() {
 
-Piece::~Piece() {
+//}
 
-}
+//Piece::~Piece() {
 
-void Piece::setColor(QString color) {
+//}
+
+void Piece::setColor(Color color) {
     this->color = color;
 }
 
-QString Piece::getColor() {
+Color Piece::getColor() {
     return color;
 }
 
-void Piece::setPieceType(QString pieceType) {
+void Piece::setPieceType(PieceType pieceType) {
     this->pieceType = pieceType;
 }
 
-QString Piece::getPieceType() {
+PieceType Piece::getPieceType() {
     return pieceType;
 }
 
-void Piece::displayPiece() {
-
-}
-
-QString Piece::getIconName() {
+string Piece::getIconName() {
     return iconName;
 }
 
-void Piece::setIconName(QString iconName) {
+void Piece::setIconName(string iconName) {
     this->iconName = iconName;
+}
+
+vector<pair<int,int>> getAllPieceMoves() {
+    return vector<pair<int,int>>();
+}
+vector<pair<int,int>> getPossiblePieceMoves() {
+    return vector<pair<int,int>>();
 }

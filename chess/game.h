@@ -3,8 +3,6 @@
 
 #include "field.h"
 
-
-
 class Game {
 
     Field fields[8][8];
