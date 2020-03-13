@@ -26,7 +26,6 @@ SOURCES += \
     mainwindow.cpp \
     pawn.cpp \
     piece.cpp \
-    position.cpp \
     queen.cpp \
     rook.cpp
 
@@ -42,7 +41,6 @@ HEADERS += \
     mainwindow.h \
     pawn.h \
     piece.h \
-    position.h \
     queen.h \
     rook.h
 

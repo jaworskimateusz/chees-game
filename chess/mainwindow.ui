@@ -36,16 +36,18 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton::pressed {
- background-color: #FFEBCD;
-}
-
-QPushButton {
+     <string notr="true">QPushButton {
  background-color: #FFFFFF;
 }</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="Field_70">
@@ -61,13 +63,16 @@ QPushButton {
      <string notr="true">QPushButton {
  background-color: #808080;
 }
-
-QPushButton::pressed {
- background-color: #FFEBCD;
-}</string>
+</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="Field_72">
@@ -83,13 +88,16 @@ QPushButton::pressed {
      <string notr="true">QPushButton {
  background-color: #808080;
 }
-
-QPushButton::pressed {
- background-color: #FFEBCD;
-}</string>
+</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="Field_73">
@@ -102,16 +110,18 @@ QPushButton::pressed {
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton::pressed {
- background-color: #FFEBCD;
-}
-
-QPushButton {
+     <string notr="true">QPushButton {
  background-color: #FFFFFF;
 }</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="Field_76">
@@ -127,13 +137,16 @@ QPushButton {
      <string notr="true">QPushButton {
  background-color: #808080;
 }
-
-QPushButton::pressed {
- background-color: #FFEBCD;
-}</string>
+</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="Field_75">
@@ -146,16 +159,18 @@ QPushButton::pressed {
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton::pressed {
- background-color: #FFEBCD;
-}
-
-QPushButton {
+     <string notr="true">QPushButton {
  background-color: #FFFFFF;
 }</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="Field_77">
@@ -168,16 +183,18 @@ QPushButton {
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton::pressed {
- background-color: #FFEBCD;
-}
-
-QPushButton {
+     <string notr="true">QPushButton {
  background-color: #FFFFFF;
 }</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="Field_74">
@@ -193,13 +210,16 @@ QPushButton {
      <string notr="true">QPushButton {
  background-color: #808080;
 }
-
-QPushButton::pressed {
- background-color: #FFEBCD;
-}</string>
+</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="Field_62">
@@ -212,16 +232,18 @@ QPushButton::pressed {
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton::pressed {
- background-color: #FFEBCD;
-}
-
-QPushButton {
+     <string notr="true">QPushButton {
  background-color: #FFFFFF;
 }</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="Field_65">
@@ -237,13 +259,16 @@ QPushButton {
      <string notr="true">QPushButton {
  background-color: #808080;
 }
-
-QPushButton::pressed {
- background-color: #FFEBCD;
-}</string>
+</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="Field_60">
@@ -256,16 +281,18 @@ QPushButton::pressed {
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton::pressed {
- background-color: #FFEBCD;
-}
-
-QPushButton {
+     <string notr="true">QPushButton {
  background-color: #FFFFFF;
 }</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="Field_67">
@@ -281,13 +308,16 @@ QPushButton {
      <string notr="true">QPushButton {
  background-color: #808080;
 }
-
-QPushButton::pressed {
- background-color: #FFEBCD;
-}</string>
+</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="Field_63">
@@ -303,13 +333,16 @@ QPushButton::pressed {
      <string notr="true">QPushButton {
  background-color: #808080;
 }
-
-QPushButton::pressed {
- background-color: #FFEBCD;
-}</string>
+</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="Field_61">
@@ -325,13 +358,16 @@ QPushButton::pressed {
      <string notr="true">QPushButton {
  background-color: #808080;
 }
-
-QPushButton::pressed {
- background-color: #FFEBCD;
-}</string>
+</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="Field_66">
@@ -344,16 +380,18 @@ QPushButton::pressed {
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton::pressed {
- background-color: #FFEBCD;
-}
-
-QPushButton {
+     <string notr="true">QPushButton {
  background-color: #FFFFFF;
 }</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="Field_64">
@@ -366,16 +404,18 @@ QPushButton {
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton::pressed {
- background-color: #FFEBCD;
-}
-
-QPushButton {
+     <string notr="true">QPushButton {
  background-color: #FFFFFF;
 }</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="Field_51">
@@ -388,16 +428,18 @@ QPushButton {
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton::pressed {
- background-color: #FFEBCD;
-}
-
-QPushButton {
+     <string notr="true">QPushButton {
  background-color: #FFFFFF;
 }</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="Field_53">
@@ -410,16 +452,18 @@ QPushButton {
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton::pressed {
- background-color: #FFEBCD;
-}
-
-QPushButton {
+     <string notr="true">QPushButton {
  background-color: #FFFFFF;
 }</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="Field_50">
@@ -435,13 +479,16 @@ QPushButton {
      <string notr="true">QPushButton {
  background-color: #808080;
 }
-
-QPushButton::pressed {
- background-color: #FFEBCD;
-}</string>
+</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="Field_57">
@@ -454,16 +501,18 @@ QPushButton::pressed {
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton::pressed {
- background-color: #FFEBCD;
-}
-
-QPushButton {
+     <string notr="true">QPushButton {
  background-color: #FFFFFF;
 }</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="Field_56">
@@ -479,13 +528,16 @@ QPushButton {
      <string notr="true">QPushButton {
  background-color: #808080;
 }
-
-QPushButton::pressed {
- background-color: #FFEBCD;
-}</string>
+</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="Field_55">
@@ -498,16 +550,18 @@ QPushButton::pressed {
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton::pressed {
- background-color: #FFEBCD;
-}
-
-QPushButton {
+     <string notr="true">QPushButton {
  background-color: #FFFFFF;
 }</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="Field_52">
@@ -523,13 +577,16 @@ QPushButton {
      <string notr="true">QPushButton {
  background-color: #808080;
 }
-
-QPushButton::pressed {
- background-color: #FFEBCD;
-}</string>
+</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="Field_54">
@@ -545,13 +602,16 @@ QPushButton::pressed {
      <string notr="true">QPushButton {
  background-color: #808080;
 }
-
-QPushButton::pressed {
- background-color: #FFEBCD;
-}</string>
+</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="Field_41">
@@ -567,13 +627,16 @@ QPushButton::pressed {
      <string notr="true">QPushButton {
  background-color: #808080;
 }
-
-QPushButton::pressed {
- background-color: #FFEBCD;
-}</string>
+</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="Field_43">
@@ -589,13 +652,16 @@ QPushButton::pressed {
      <string notr="true">QPushButton {
  background-color: #808080;
 }
-
-QPushButton::pressed {
- background-color: #FFEBCD;
-}</string>
+</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="Field_40">
@@ -608,16 +674,18 @@ QPushButton::pressed {
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton::pressed {
- background-color: #FFEBCD;
-}
-
-QPushButton {
+     <string notr="true">QPushButton {
  background-color: #FFFFFF;
 }</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="Field_47">
@@ -633,13 +701,16 @@ QPushButton {
      <string notr="true">QPushButton {
  background-color: #808080;
 }
-
-QPushButton::pressed {
- background-color: #FFEBCD;
-}</string>
+</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="Field_46">
@@ -652,11 +723,7 @@ QPushButton::pressed {
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton::pressed {
- background-color: #FFEBCD;
-}
-
-QPushButton {
+     <string notr="true">QPushButton {
  background-color: #FFFFFF;
 }</string>
     </property>
@@ -677,13 +744,16 @@ QPushButton {
      <string notr="true">QPushButton {
  background-color: #808080;
 }
-
-QPushButton::pressed {
- background-color: #FFEBCD;
-}</string>
+</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="Field_42">
@@ -696,16 +766,18 @@ QPushButton::pressed {
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton::pressed {
- background-color: #FFEBCD;
-}
-
-QPushButton {
+     <string notr="true">QPushButton {
  background-color: #FFFFFF;
 }</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="Field_44">
@@ -718,16 +790,18 @@ QPushButton {
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton::pressed {
- background-color: #FFEBCD;
-}
-
-QPushButton {
+     <string notr="true">QPushButton {
  background-color: #FFFFFF;
 }</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="Field_04">
@@ -740,16 +814,18 @@ QPushButton {
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton::pressed {
- background-color: #FFEBCD;
-}
-
-QPushButton {
+     <string notr="true">QPushButton {
  background-color: #FFFFFF;
 }</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="Field_25">
@@ -765,13 +841,16 @@ QPushButton {
      <string notr="true">QPushButton {
  background-color: #808080;
 }
-
-QPushButton::pressed {
- background-color: #FFEBCD;
-}</string>
+</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="Field_22">
@@ -784,16 +863,18 @@ QPushButton::pressed {
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton::pressed {
- background-color: #FFEBCD;
-}
-
-QPushButton {
+     <string notr="true">QPushButton {
  background-color: #FFFFFF;
 }</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="Field_17">
@@ -806,16 +887,18 @@ QPushButton {
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton::pressed {
- background-color: #FFEBCD;
-}
-
-QPushButton {
+     <string notr="true">QPushButton {
  background-color: #FFFFFF;
 }</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="Field_11">
@@ -828,16 +911,18 @@ QPushButton {
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton::pressed {
- background-color: #FFEBCD;
-}
-
-QPushButton {
+     <string notr="true">QPushButton {
  background-color: #FFFFFF;
 }</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="Field_13">
@@ -850,16 +935,18 @@ QPushButton {
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton::pressed {
- background-color: #FFEBCD;
-}
-
-QPushButton {
+     <string notr="true">QPushButton {
  background-color: #FFFFFF;
 }</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="Field_12">
@@ -875,13 +962,16 @@ QPushButton {
      <string notr="true">QPushButton {
  background-color: #808080;
 }
-
-QPushButton::pressed {
- background-color: #FFEBCD;
-}</string>
+</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="Field_35">
@@ -894,16 +984,18 @@ QPushButton::pressed {
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton::pressed {
- background-color: #FFEBCD;
-}
-
-QPushButton {
+     <string notr="true">QPushButton {
  background-color: #FFFFFF;
 }</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="Field_06">
@@ -916,16 +1008,18 @@ QPushButton {
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton::pressed {
- background-color: #FFEBCD;
-}
-
-QPushButton {
+     <string notr="true">QPushButton {
  background-color: #FFFFFF;
 }</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="Field_20">
@@ -938,16 +1032,18 @@ QPushButton {
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton::pressed {
- background-color: #FFEBCD;
-}
-
-QPushButton {
+     <string notr="true">QPushButton {
  background-color: #FFFFFF;
 }</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="Field_02">
@@ -960,16 +1056,18 @@ QPushButton {
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton::pressed {
- background-color: #FFEBCD;
-}
-
-QPushButton {
+     <string notr="true">QPushButton {
  background-color: #FFFFFF;
 }</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="Field_21">
@@ -985,13 +1083,16 @@ QPushButton {
      <string notr="true">QPushButton {
  background-color: #808080;
 }
-
-QPushButton::pressed {
- background-color: #FFEBCD;
-}</string>
+</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="Field_33">
@@ -1004,16 +1105,18 @@ QPushButton::pressed {
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton::pressed {
- background-color: #FFEBCD;
-}
-
-QPushButton {
+     <string notr="true">QPushButton {
  background-color: #FFFFFF;
 }</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="Field_10">
@@ -1029,13 +1132,16 @@ QPushButton {
      <string notr="true">QPushButton {
  background-color: #808080;
 }
-
-QPushButton::pressed {
- background-color: #FFEBCD;
-}</string>
+</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="Field_14">
@@ -1051,13 +1157,16 @@ QPushButton::pressed {
      <string notr="true">QPushButton {
  background-color: #808080;
 }
-
-QPushButton::pressed {
- background-color: #FFEBCD;
-}</string>
+</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="Field_32">
@@ -1073,13 +1182,16 @@ QPushButton::pressed {
      <string notr="true">QPushButton {
  background-color: #808080;
 }
-
-QPushButton::pressed {
- background-color: #FFEBCD;
-}</string>
+</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="Field_01">
@@ -1095,13 +1207,16 @@ QPushButton::pressed {
      <string notr="true">QPushButton {
  background-color: #808080;
 }
-
-QPushButton::pressed {
- background-color: #FFEBCD;
-}</string>
+</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="Field_23">
@@ -1117,13 +1232,16 @@ QPushButton::pressed {
      <string notr="true">QPushButton {
  background-color: #808080;
 }
-
-QPushButton::pressed {
- background-color: #FFEBCD;
-}</string>
+</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="Field_24">
@@ -1136,16 +1254,18 @@ QPushButton::pressed {
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton::pressed {
- background-color: #FFEBCD;
-}
-
-QPushButton {
+     <string notr="true">QPushButton {
  background-color: #FFFFFF;
 }</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="Field_26">
@@ -1158,16 +1278,18 @@ QPushButton {
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton::pressed {
- background-color: #FFEBCD;
-}
-
-QPushButton {
+     <string notr="true">QPushButton {
  background-color: #FFFFFF;
 }</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="Field_07">
@@ -1183,13 +1305,16 @@ QPushButton {
      <string notr="true">QPushButton {
  background-color: #808080;
 }
-
-QPushButton::pressed {
- background-color: #FFEBCD;
-}</string>
+</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="Field_00">
@@ -1202,16 +1327,18 @@ QPushButton::pressed {
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton::pressed {
- background-color: #FFEBCD;
-}
-
-QPushButton {
+     <string notr="true">QPushButton {
  background-color: #FFFFFF;
 }</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="Field_36">
@@ -1227,13 +1354,16 @@ QPushButton {
      <string notr="true">QPushButton {
  background-color: #808080;
 }
-
-QPushButton::pressed {
- background-color: #FFEBCD;
-}</string>
+</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="Field_27">
@@ -1249,10 +1379,7 @@ QPushButton::pressed {
      <string notr="true">QPushButton {
  background-color: #808080;
 }
-
-QPushButton::pressed {
- background-color: #FFEBCD;
-}</string>
+</string>
     </property>
     <property name="text">
      <string/>
@@ -1268,16 +1395,18 @@ QPushButton::pressed {
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton::pressed {
- background-color: #FFEBCD;
-}
-
-QPushButton {
+     <string notr="true">QPushButton {
  background-color: #FFFFFF;
 }</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="Field_05">
@@ -1293,13 +1422,16 @@ QPushButton {
      <string notr="true">QPushButton {
  background-color: #808080;
 }
-
-QPushButton::pressed {
- background-color: #FFEBCD;
-}</string>
+</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="Field_30">
@@ -1315,13 +1447,16 @@ QPushButton::pressed {
      <string notr="true">QPushButton {
  background-color: #808080;
 }
-
-QPushButton::pressed {
- background-color: #FFEBCD;
-}</string>
+</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="Field_16">
@@ -1337,13 +1472,16 @@ QPushButton::pressed {
      <string notr="true">QPushButton {
  background-color: #808080;
 }
-
-QPushButton::pressed {
- background-color: #FFEBCD;
-}</string>
+</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="Field_31">
@@ -1356,16 +1494,18 @@ QPushButton::pressed {
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton::pressed {
- background-color: #FFEBCD;
-}
-
-QPushButton {
+     <string notr="true">QPushButton {
  background-color: #FFFFFF;
 }</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="Field_03">
@@ -1381,13 +1521,16 @@ QPushButton {
      <string notr="true">QPushButton {
  background-color: #808080;
 }
-
-QPushButton::pressed {
- background-color: #FFEBCD;
-}</string>
+</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="Field_15">
@@ -1400,16 +1543,18 @@ QPushButton::pressed {
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton::pressed {
- background-color: #FFEBCD;
-}
-
-QPushButton {
+     <string notr="true">QPushButton {
  background-color: #FFFFFF;
 }</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="Field_34">
@@ -1425,13 +1570,16 @@ QPushButton {
      <string notr="true">QPushButton {
  background-color: #808080;
 }
-
-QPushButton::pressed {
- background-color: #FFEBCD;
-}</string>
+</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
     </property>
    </widget>
    <widget class="QToolButton" name="NewGame">

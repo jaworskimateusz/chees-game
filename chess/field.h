@@ -13,6 +13,10 @@ public:
     Field();
     ~Field();
     void setPiece(Piece *piece, Color color, PieceType pieceType, string iconName);
+    Piece getPiece();
+    Color getColor();
+    PieceType getPieceType();
+    string getIconName();
 };
 
 #endif // FIELD_H

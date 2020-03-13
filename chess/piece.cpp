@@ -32,9 +32,10 @@ void Piece::setIconName(string iconName) {
     this->iconName = iconName;
 }
 
-vector<pair<int,int>> getAllPieceMoves() {
+vector<pair<int,int>> Piece::getAllPieceMoves() {
     return vector<pair<int,int>>();
 }
-vector<pair<int,int>> getPossiblePieceMoves() {
+
+vector<pair<int,int>> Piece::getPossiblePieceMoves() {
     return vector<pair<int,int>>();
 }

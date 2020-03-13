@@ -12,7 +12,6 @@ using namespace std;
 class Piece {
 
 private:
-
     Color color;
     PieceType pieceType;
     string iconName;

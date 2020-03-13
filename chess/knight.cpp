@@ -1,6 +1,15 @@
 #include "knight.h"
 
-Knight::Knight()
-{
+Knight::Knight() {
 
+}
+
+vector<pair<int,int>> Knight::getAllPieceMoves() {
+    vector<pair<int,int>> allMoves;
+    return allMoves;
+}
+
+vector<pair<int,int>> Knight::getPossiblePieceMoves() {
+    vector<pair<int,int>> allMoves;
+    return allMoves;
 }
