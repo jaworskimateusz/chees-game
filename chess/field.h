@@ -17,6 +17,7 @@ public:
     Color getColor();
     PieceType getPieceType();
     string getIconName();
+    vector<pair<int,int>> getMoves(int x, int y);
 };
 
 #endif // FIELD_H

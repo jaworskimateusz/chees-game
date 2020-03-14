@@ -7,8 +7,7 @@ class Rook : public Piece {
 
 public:
     Rook();
-    virtual vector<pair<int,int>> getAllPieceMoves() override;
-    virtual vector<pair<int,int>> getPossiblePieceMoves() override;
+    virtual vector<pair<int,int>> getPossiblePieceMoves(int x, int y) override;
 };
 
 #endif // ROOK_H

@@ -7,8 +7,7 @@ class King : public Piece {
 
 public:
     King();
-    virtual vector<pair<int,int>> getAllPieceMoves() override;
-    virtual vector<pair<int,int>> getPossiblePieceMoves() override;
+    virtual vector<pair<int,int>> getPossiblePieceMoves(int x, int y) override;
 };
 
 #endif // KING_H

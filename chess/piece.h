@@ -15,6 +15,8 @@ private:
     Color color;
     PieceType pieceType;
     string iconName;
+protected:
+    vector<pair<int,int>> moves;
 public:
     Piece();
     ~Piece();
@@ -25,8 +27,9 @@ public:
     PieceType getPieceType();
     string getIconName();
     void setIconName(string iconName);
-    virtual vector<pair<int,int>> getAllPieceMoves() = 0;
-    virtual vector<pair<int,int>> getPossiblePieceMoves() = 0;
+//    virtual vector<pair<int,int>> getAllPieceMoves() = 0; //change to this later
+//    virtual vector<pair<int,int>> getPossiblePieceMoves() = 0;
+    virtual vector<pair<int,int>> getPossiblePieceMoves(int x, int y);
 
 };
 

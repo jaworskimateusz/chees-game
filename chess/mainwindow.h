@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <string>
 #include <game.h>
+#include "QPushButton"
 
 using namespace std;
 QT_BEGIN_NAMESPACE
@@ -24,6 +25,9 @@ private slots:
     void onFieldClick();
     pair<int,int> getPosition(string s);
     void onButtonClick();
+    void uncheckColors();
+    void colorPossibleMoves(vector<pair<int,int>> moves);
+    QPushButton * getClickedButton(int x, int y);
 
 };
 #endif // MAINWINDOW_H

@@ -1,13 +1,4 @@
 #include "game.h"
-#include "pawn.h"
-#include "emptyfield.h"
-#include "rook.h"
-#include "bishop.h"
-#include "knight.h"
-#include "queen.h"
-#include "king.h"
-#include "PieceType.h"
-#include "Color.h"
 
 Game::Game() {
 
@@ -98,4 +89,8 @@ void Game::swapPiece(pair<int,int> previousPosition, pair<int,int> newPosition) 
     }
 
    fields[y0][x0].setPiece(new class EmptyField(), INVISIBLE, EMPTY_FIELD, "");
+}
+
+vector<pair<int,int>> Game::getPieceMoves() {
+    return pieceMoves;
 }

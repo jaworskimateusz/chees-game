@@ -6,8 +6,7 @@
 class Queen : public Piece{
 public:
     Queen();
-    virtual vector<pair<int,int>> getAllPieceMoves() override;
-    virtual vector<pair<int,int>> getPossiblePieceMoves() override;
+    virtual vector<pair<int,int>> getPossiblePieceMoves(int x, int y) override;
 };
 
 #endif // QUEEN_H

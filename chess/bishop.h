@@ -7,8 +7,7 @@ class Bishop : public Piece {
 
 public:
     Bishop();
-    virtual vector<pair<int,int>> getAllPieceMoves() override;
-    virtual vector<pair<int,int>> getPossiblePieceMoves() override;
+    virtual vector<pair<int,int>> getPossiblePieceMoves(int x, int y) override;
 };
 
 #endif // BISHOP_H
