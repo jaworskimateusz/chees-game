@@ -9,21 +9,22 @@ using namespace std;
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow) {
-
+    setWindowTitle("Chess");
     ui->setupUi(this);
     this->game = Game();
 
-        for(int i = 0; i < 8; i ++){
-            for (int j = 0; j < 8; j ++) {
-                QPushButton *btn = getClickedButton(i, j);
-                btn->setIcon(QIcon(QString::fromStdString(game.fields[i][j].getIconName())));
-                connect(btn,
-                        SIGNAL(released()),
-                        this,
-                        SLOT(onFieldClick()));
-            }
-
+    for(int i = 0; i < 8; i ++){
+        for (int j = 0; j < 8; j ++) {
+            QPushButton *btn = getClickedButton(i, j);
+            btn->setIcon(QIcon(""));
+            btn->setIcon(QIcon(QString::fromStdString(game.fields[i][j].getIconName())));
+            connect(btn,
+                    SIGNAL(released()),
+                    this,
+                    SLOT(onFieldClick()));
         }
+
+    }
 
         connect(MainWindow::findChild<QToolButton *>("NewGame"),
                 SIGNAL(released()),
@@ -45,13 +46,40 @@ void MainWindow::onFieldClick() {
 
     Color c = game.getCurrentMove();
     pair<int,int> position = getPosition(field->objectName().toStdString());
-    vector<pair<int,int>> possiblePositions = game.getField(position.first, position.second).getMoves(position.first, position.second);
+    if(!isClicked) {
+        possiblePositions = game.getField(position.first, position.second).getMoves(position.first, position.second);
+        qDebug()<<possiblePositions;
+        uncheckColors();
+        field->setStyleSheet("QPushButton { background-color : #FFDEAD; }");
+        colorPossibleMoves(possiblePositions);
+        positionFrom = position;
+        isClicked = true;
+    } else {
+        positionTo = position;
+        if(isEmpty(positionTo)) {
+            printFields();
+            game.swapPiece(positionFrom, positionTo);
+            qDebug()<< "after";
+            printFields();
 
-    qDebug()<<possiblePositions;
-    uncheckColors();
-    field->setStyleSheet("QPushButton { background-color : #FFDEAD; }");
-    colorPossibleMoves(possiblePositions);
+        }
+        isClicked = false;
+        uncheckColors();
 
+    }
+
+
+}
+
+void MainWindow::printFields() {
+    for(int i = 0; i < 8; i++)
+        for(int j = 0; j < 8; j++)
+            qDebug()<<QString::fromStdString(game.fields[i][j].getIconName());
+}
+
+bool MainWindow::isEmpty(pair<int,int> positionTo) {
+    if(game.getField(positionTo.first, positionTo.second).getPieceType() == EMPTY_FIELD)
+        return true;
 }
 
 void MainWindow::uncheckColors() {
@@ -94,4 +122,16 @@ pair<int,int> MainWindow::getPosition(string s) {
     int x = stoi(index.substr(0,1));
     int y = stoi(index.substr(1,2));
     return pair<int,int>(x,y);
+}
+
+void MainWindow::updateGame() {
+    qDebug()<< "updateGame()";
+    for(int i = 0; i < 8; i ++){
+        for (int j = 0; j < 8; j ++) {
+            QPushButton *btn = getClickedButton(i, j);
+            btn->setIcon(QIcon(""));
+            btn->setIcon(QIcon(QString::fromStdString(game.fields[i][j].getIconName())));
+        }
+
+    }
 }
