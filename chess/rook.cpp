@@ -1,9 +1,5 @@
 #include "rook.h"
 
-Rook::Rook() {
-
-}
-
 vector<pair<int,int>> Rook::getPossiblePieceMoves(int x, int y) {
     moves.clear();
 

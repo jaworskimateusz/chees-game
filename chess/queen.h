@@ -5,7 +5,6 @@
 
 class Queen : public Piece{
 public:
-    Queen();
     virtual vector<pair<int,int>> getPossiblePieceMoves(int x, int y) override;
 };
 

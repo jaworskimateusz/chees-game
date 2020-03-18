@@ -1,9 +1,5 @@
 #include "knight.h"
 
-Knight::Knight() {
-
-}
-
 vector<pair<int,int>> Knight::getPossiblePieceMoves(int x, int y) {
     moves.clear();
 

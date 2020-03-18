@@ -1,9 +1,5 @@
 #include "bishop.h"
 
-Bishop::Bishop() {
-
-}
-
 vector<pair<int,int>> Bishop::getPossiblePieceMoves(int x, int y) {
     moves.clear();
 

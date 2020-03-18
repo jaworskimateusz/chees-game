@@ -1,9 +1,5 @@
 #include "king.h"
 
-King::King() {
-
-}
-
 vector<pair<int,int>> King::getPossiblePieceMoves(int x, int y) {
     moves.clear();
 

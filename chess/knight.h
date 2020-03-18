@@ -6,7 +6,6 @@
 class Knight : public Piece{
 
 public:
-    Knight();
     virtual vector<pair<int,int>> getPossiblePieceMoves(int x, int y) override;
 };
 

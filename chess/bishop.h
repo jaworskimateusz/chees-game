@@ -6,7 +6,6 @@
 class Bishop : public Piece {
 
 public:
-    Bishop();
     virtual vector<pair<int,int>> getPossiblePieceMoves(int x, int y) override;
 };
 

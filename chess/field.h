@@ -4,16 +4,14 @@
 
 class Field {
 
-private:
-    Color color;
-    PieceType pieceType;
-    string iconName;
+    friend class Piece;
+protected:
     Piece *piece;
 public:
     Field();
     ~Field();
     void setPiece(Piece *piece, Color color, PieceType pieceType, string iconName);
-    Piece getPiece();
+    Piece* getPiece();
     Color getColor();
     PieceType getPieceType();
     string getIconName();

@@ -11,13 +11,13 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow) {
     setWindowTitle("Chess");
     ui->setupUi(this);
-    this->game = Game();
-
+    game = new Game();
+    setCurrentMoveLayout();
     for(int i = 0; i < 8; i ++){
         for (int j = 0; j < 8; j ++) {
             QPushButton *btn = getClickedButton(i, j);
             btn->setIcon(QIcon(""));
-            btn->setIcon(QIcon(QString::fromStdString(game.fields[i][j].getIconName())));
+            btn->setIcon(QIcon(QString::fromStdString(game->getField(i,j)->getIconName())));
             connect(btn,
                     SIGNAL(released()),
                     this,
@@ -44,42 +44,46 @@ void MainWindow::onFieldClick() {
     QPushButton *field = (QPushButton *)sender();
     qDebug() << field->objectName();
 
-    Color c = game.getCurrentMove();
     pair<int,int> position = getPosition(field->objectName().toStdString());
-    if(!isClicked) {
-        possiblePositions = game.getField(position.first, position.second).getMoves(position.first, position.second);
-        qDebug()<<possiblePositions;
-        uncheckColors();
-        field->setStyleSheet("QPushButton { background-color : #FFDEAD; }");
-        colorPossibleMoves(possiblePositions);
-        positionFrom = position;
-        isClicked = true;
-    } else {
-        positionTo = position;
-        if(isEmpty(positionTo)) {
-            printFields();
-            game.swapPiece(positionFrom, positionTo);
-            qDebug()<< "after";
-            printFields();
-
+    if(game->getCurrentMove() == game->getField(position.first, position.second)->getPiece()->getColor() || isClicked) {
+        if(!isClicked) {
+            possiblePositions = game->getField(position.first, position.second)->getMoves(position.first, position.second);
+            qDebug()<<possiblePositions;
+            uncheckColors();
+            field->setStyleSheet("QPushButton { background-color : #FFDEAD; }");
+            colorPossibleMoves(possiblePositions);
+            positionFrom = position;
+            isClicked = true;
+        } else {
+            positionTo = position;
+            if(isEmpty(positionTo) && hasMove()) {
+                printFields();
+                game->swapPiece(positionFrom, positionTo);
+                printFields();
+                updateGame();
+            }
+            isClicked = false;
+            uncheckColors();
         }
-        isClicked = false;
-        uncheckColors();
-
     }
-
 
 }
 
 void MainWindow::printFields() {
     for(int i = 0; i < 8; i++)
         for(int j = 0; j < 8; j++)
-            qDebug()<<QString::fromStdString(game.fields[i][j].getIconName());
+            qDebug()<<QString::fromStdString(game->getField(i,j)->getIconName());
 }
 
 bool MainWindow::isEmpty(pair<int,int> positionTo) {
-    if(game.getField(positionTo.first, positionTo.second).getPieceType() == EMPTY_FIELD)
+    if(game->getField(positionTo.first, positionTo.second)->getPieceType() == EMPTY_FIELD)
         return true;
+}
+
+bool MainWindow::hasMove() {
+    if(std::find(possiblePositions.begin(), possiblePositions.end(), positionTo) != possiblePositions.end())
+       return true;
+    return false;
 }
 
 void MainWindow::uncheckColors() {
@@ -97,7 +101,6 @@ void MainWindow::uncheckColors() {
 void MainWindow::colorPossibleMoves(vector<pair<int,int>> moves) {
     for (auto & i : moves)
         getClickedButton(i.first, i.second)->setStyleSheet("QPushButton {background-color: #FAEBD7;}");
-
 }
 
 void MainWindow::onButtonClick() {
@@ -125,13 +128,20 @@ pair<int,int> MainWindow::getPosition(string s) {
 }
 
 void MainWindow::updateGame() {
-    qDebug()<< "updateGame()";
     for(int i = 0; i < 8; i ++){
         for (int j = 0; j < 8; j ++) {
             QPushButton *btn = getClickedButton(i, j);
-            btn->setIcon(QIcon(""));
-            btn->setIcon(QIcon(QString::fromStdString(game.fields[i][j].getIconName())));
+            btn->setIcon(QIcon(QString::fromStdString(game->getField(i,j)->getIconName())));
         }
-
     }
+    setCurrentMoveLayout();
+}
+
+void MainWindow::setCurrentMoveLayout() {
+    QToolButton *turn = MainWindow::findChild<QToolButton *>("Turn");
+    game->setCurrentMove();
+    if(game->getCurrentMove() == BLACK)
+        turn->setIcon(QIcon(QString::fromStdString(":/img/left_arrow_black.png")));
+    else
+        turn->setIcon(QIcon(QString::fromStdString(":/img/right_arrow_white.png" )));
 }

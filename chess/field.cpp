@@ -10,25 +10,25 @@ Field::~Field() {
 
 void Field::setPiece(Piece *p, Color color, PieceType pieceType, string iconName ) {
     piece = p;
-    this->color = color;
-    this->pieceType = pieceType;
-    this->iconName = iconName;
+    piece->color = color;
+    piece->pieceType = pieceType;
+    piece->iconName = iconName;
 }
 
-Piece Field::getPiece() {
-    return *piece;
+Piece* Field::getPiece() {
+    return piece;
 }
 
 Color Field::getColor() {
-    return color;
+    return piece->getColor();
 }
 
 PieceType Field::getPieceType() {
-    return pieceType;
+    return piece->getPieceType();
 }
 
 string Field::getIconName() {
-    return iconName;
+    return piece->getIconName();
 }
 
 vector<pair<int,int>> Field::getMoves(int x, int y) {

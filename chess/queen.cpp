@@ -1,9 +1,5 @@
 #include "queen.h"
 
-Queen::Queen() {
-
-}
-
 vector<pair<int,int>> Queen::getPossiblePieceMoves(int x, int y) {
     moves.clear();
 

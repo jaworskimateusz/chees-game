@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <string>
 #include <game.h>
+#include <algorithm>
 #include "QPushButton"
 
 using namespace std;
@@ -17,7 +18,7 @@ class MainWindow : public QMainWindow {
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-    Game game;
+    Game *game;
 private:
     Ui::MainWindow *ui;
     pair<int,int> positionFrom;
@@ -29,12 +30,14 @@ private slots:
     void onFieldClick();
     pair<int,int> getPosition(string s);
     bool isEmpty(pair<int,int> positionTo);
+    bool hasMove();
     void onButtonClick();
     void uncheckColors();
     void printFields();
     void colorPossibleMoves(vector<pair<int,int>> moves);
     QPushButton * getClickedButton(int x, int y);
     void updateGame();
+    void setCurrentMoveLayout();
 
 };
 #endif // MAINWINDOW_H

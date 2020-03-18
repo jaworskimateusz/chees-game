@@ -17,12 +17,12 @@ class Game {
     Color currentMove;
     vector<pair<int,int>> pieceMoves;
 public:
-    Field fields[8][8];
+    Field ***fields;
 
 public:
     Game();
     ~Game();
-    Field getField(int x, int y);
+    Field *getField(int x, int y);
     Color getCurrentMove();
     void setCurrentMove();
     void swapPiece(pair<int,int> previousPosition, pair<int,int> newPosition);
