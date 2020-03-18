@@ -61,6 +61,11 @@ void MainWindow::onFieldClick() {
                 game->swapPiece(positionFrom, positionTo);
                 printFields();
                 updateGame();
+            } else if (isOpponent(positionTo) && hasMove()) {
+                printFields();
+                game->swapPiece(positionFrom, positionTo);
+                printFields();
+                updateGame();
             }
             isClicked = false;
             uncheckColors();
@@ -78,11 +83,19 @@ void MainWindow::printFields() {
 bool MainWindow::isEmpty(pair<int,int> positionTo) {
     if(game->getField(positionTo.first, positionTo.second)->getPieceType() == EMPTY_FIELD)
         return true;
+    return false;
 }
 
 bool MainWindow::hasMove() {
     if(std::find(possiblePositions.begin(), possiblePositions.end(), positionTo) != possiblePositions.end())
        return true;
+    return false;
+}
+
+bool MainWindow::isOpponent(pair<int,int> positionTo) {
+    Color c = game->getField(positionTo.first, positionTo.second)->getPiece()->getColor();
+    if(c != game->getCurrentMove() && c != INVISIBLE)
+        return true;
     return false;
 }
 
@@ -99,8 +112,13 @@ void MainWindow::uncheckColors() {
 }
 
 void MainWindow::colorPossibleMoves(vector<pair<int,int>> moves) {
-    for (auto & i : moves)
-        getClickedButton(i.first, i.second)->setStyleSheet("QPushButton {background-color: #FAEBD7;}");
+    for (auto & i : moves) {
+        if(isEmpty(i))
+            getClickedButton(i.first, i.second)->setStyleSheet("QPushButton {background-color: #FAEBD7;}");
+        if(isOpponent(i))
+            getClickedButton(i.first, i.second)->setStyleSheet("QPushButton {background-color: #800000;}");
+    }
+
 }
 
 void MainWindow::onButtonClick() {

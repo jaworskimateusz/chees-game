@@ -31,6 +31,7 @@ private slots:
     pair<int,int> getPosition(string s);
     bool isEmpty(pair<int,int> positionTo);
     bool hasMove();
+    bool isOpponent(pair<int,int> positionTo);
     void onButtonClick();
     void uncheckColors();
     void printFields();
