@@ -6,6 +6,7 @@
 #include <game.h>
 #include <algorithm>
 #include "QPushButton"
+#include "QMessageBox"
 
 using namespace std;
 QT_BEGIN_NAMESPACE
@@ -34,6 +35,7 @@ private slots:
     void onButtonClick();
     bool isOpponent(pair<int,int> positionTo);
     QPushButton * getClickedButton(int x, int y);
+    void isGameOver();
     void uncheckColors();
     void colorPossibleMoves(vector<pair<int,int>> moves);
     void updateGame();

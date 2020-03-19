@@ -91,6 +91,33 @@ void Game::swapPiece(pair<int,int> previousPosition, pair<int,int> newPosition) 
             fields[x][y]->setPiece(new Rook(), color, ROOK, ":/img/rook" + _white); break;
     }
 
+   setGameOver();
    fields[x0][y0]->setPiece(new EmptyField(), INVISIBLE, EMPTY_FIELD, "");
 }
 
+bool Game::getGameOver() {
+    return isGameOver;
+}
+
+void Game::setGameOver() {
+    int kings = 0;
+    for(int i = 0; i < 8 ;i++) {
+        for(int j = 0; j < 8 ;j++){
+            if(getField(i,j)->getPiece()->getPieceType() == KING) {
+                kings++;
+            }
+            if(kings == 2) {
+                this->isGameOver = false;
+                break;
+            }
+        }
+    }
+    if(kings < 2)
+        this->isGameOver = true;
+}
+
+void Game::endGame() {
+    for(int i = 0; i < 8 ;i++)
+        for(int j = 0; j < 8 ;j++)
+            getField(i,j)->setPiece(new EmptyField(), INVISIBLE, EMPTY_FIELD, "");
+}

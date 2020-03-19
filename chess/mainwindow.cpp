@@ -13,27 +13,18 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     game = new Game();
     setCurrentMoveLayout();
+
     for(int i = 0; i < 8; i ++){
         for (int j = 0; j < 8; j ++) {
             QPushButton *btn = getClickedButton(i, j);
             btn->setIcon(QIcon(""));
             btn->setIcon(QIcon(QString::fromStdString(game->getField(i,j)->getPiece()->getIconName())));
-            connect(btn,
-                    SIGNAL(released()),
-                    this,
-                    SLOT(onFieldClick()));
+            connect(btn, SIGNAL(released()),this,SLOT(onFieldClick()));
         }
-
     }
 
-        connect(MainWindow::findChild<QToolButton *>("NewGame"),
-                SIGNAL(released()),
-                this,
-                SLOT(onButtonClick()));
-        connect(MainWindow::findChild<QToolButton *>("Quit"),
-                SIGNAL(released()),
-                this,
-                SLOT(onButtonClick()));
+    connect(MainWindow::findChild<QToolButton *>("NewGame"),SIGNAL(released()),this,SLOT(onButtonClick()));
+    connect(MainWindow::findChild<QToolButton *>("Quit"),SIGNAL(released()),this,SLOT(onButtonClick()));
 }
 
 MainWindow::~MainWindow() {
@@ -316,6 +307,7 @@ void MainWindow::updateGame() {
             btn->setIcon(QIcon(QString::fromStdString(game->getField(i,j)->getPiece()->getIconName())));
         }
     }
+    isGameOver();
     setCurrentMoveLayout();
 }
 
@@ -326,5 +318,15 @@ void MainWindow::setCurrentMoveLayout() {
         turn->setIcon(QIcon(QString::fromStdString(":/img/left_arrow_black.png")));
     else
         turn->setIcon(QIcon(QString::fromStdString(":/img/right_arrow_white.png" )));
+}
+
+void MainWindow::isGameOver(){
+    if(game->getGameOver()) {
+        QString msg = "The winner is color: " + QString::fromStdString((game->getCurrentMove() == WHITE) ? "WHITE" : "BLACK");
+        qDebug()<<msg;
+        QMessageBox::about(this,"Game Over", msg);
+        game->endGame();
+    }
+
 }
 

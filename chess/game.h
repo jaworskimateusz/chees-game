@@ -17,14 +17,17 @@ class Game {
 private:
     Color currentMove;
     vector<pair<int,int>> pieceMoves;
+    bool isGameOver = false;
 public:
     Field ***fields;
-
 public:
     Game();
     ~Game();
     Field *getField(int x, int y);
     Color getCurrentMove();
+    bool getGameOver();
+    void setGameOver();
+    void endGame();
     void setCurrentMove();
     void swapPiece(pair<int,int> previousPosition, pair<int,int> newPosition);
 };
