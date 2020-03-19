@@ -5,16 +5,13 @@
 class Field {
 
     friend class Piece;
-protected:
+private:
     Piece *piece;
 public:
     Field();
     ~Field();
     void setPiece(Piece *piece, Color color, PieceType pieceType, string iconName);
     Piece* getPiece();
-    Color getColor();
-    PieceType getPieceType();
-    string getIconName();
     vector<pair<int,int>> getMoves(int x, int y);
 };
 

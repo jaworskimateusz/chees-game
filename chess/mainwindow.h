@@ -25,20 +25,22 @@ private:
     pair<int,int> positionTo;
     bool isClicked = false;
     vector<pair<int,int>> possiblePositions;
-
-private slots:
-    void onFieldClick();
+private slots: 
     pair<int,int> getPosition(string s);
     bool isEmpty(pair<int,int> positionTo);
     bool hasMove();
-    bool isOpponent(pair<int,int> positionTo);
+    void filterPossiblePositions(Piece* piece);
+    void onFieldClick();
     void onButtonClick();
-    void uncheckColors();
-    void printFields();
-    void colorPossibleMoves(vector<pair<int,int>> moves);
+    bool isOpponent(pair<int,int> positionTo);
     QPushButton * getClickedButton(int x, int y);
+    void uncheckColors();
+    void colorPossibleMoves(vector<pair<int,int>> moves);
     void updateGame();
     void setCurrentMoveLayout();
+    void filterBishopMoves();
+    void filterRookMoves();
+    void filterPawnMoves();
 
 };
 #endif // MAINWINDOW_H

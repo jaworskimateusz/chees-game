@@ -17,7 +17,7 @@ MainWindow::MainWindow(QWidget *parent)
         for (int j = 0; j < 8; j ++) {
             QPushButton *btn = getClickedButton(i, j);
             btn->setIcon(QIcon(""));
-            btn->setIcon(QIcon(QString::fromStdString(game->getField(i,j)->getIconName())));
+            btn->setIcon(QIcon(QString::fromStdString(game->getField(i,j)->getPiece()->getIconName())));
             connect(btn,
                     SIGNAL(released()),
                     this,
@@ -43,45 +43,38 @@ MainWindow::~MainWindow() {
 void MainWindow::onFieldClick() {
     QPushButton *field = (QPushButton *)sender();
     qDebug() << field->objectName();
-
     pair<int,int> position = getPosition(field->objectName().toStdString());
-    if(game->getCurrentMove() == game->getField(position.first, position.second)->getPiece()->getColor() || isClicked) {
+    Field * f = game->getField(position.first, position.second);
+
+    if(game->getCurrentMove() == f->getPiece()->getColor() || isClicked) {
         if(!isClicked) {
-            possiblePositions = game->getField(position.first, position.second)->getMoves(position.first, position.second);
-            qDebug()<<possiblePositions;
+            positionFrom = position;
+            PieceType p = f->getPiece()->getPieceType();
+            if(p == BISHOP || p == ROOK || p == QUEEN || p == PAWN)
+                filterPossiblePositions(f->getPiece());
+            else
+                possiblePositions = f->getMoves(position.first, position.second);
             uncheckColors();
             field->setStyleSheet("QPushButton { background-color : #FFDEAD; }");
             colorPossibleMoves(possiblePositions);
-            positionFrom = position;
             isClicked = true;
-        } else {
+        } else { 
             positionTo = position;
             if(isEmpty(positionTo) && hasMove()) {
-                printFields();
                 game->swapPiece(positionFrom, positionTo);
-                printFields();
                 updateGame();
             } else if (isOpponent(positionTo) && hasMove()) {
-                printFields();
                 game->swapPiece(positionFrom, positionTo);
-                printFields();
                 updateGame();
             }
             isClicked = false;
             uncheckColors();
         }
     }
-
-}
-
-void MainWindow::printFields() {
-    for(int i = 0; i < 8; i++)
-        for(int j = 0; j < 8; j++)
-            qDebug()<<QString::fromStdString(game->getField(i,j)->getIconName());
 }
 
 bool MainWindow::isEmpty(pair<int,int> positionTo) {
-    if(game->getField(positionTo.first, positionTo.second)->getPieceType() == EMPTY_FIELD)
+    if(game->getField(positionTo.first, positionTo.second)->getPiece()->getPieceType() == EMPTY_FIELD)
         return true;
     return false;
 }
@@ -97,6 +90,177 @@ bool MainWindow::isOpponent(pair<int,int> positionTo) {
     if(c != game->getCurrentMove() && c != INVISIBLE)
         return true;
     return false;
+}
+
+void MainWindow::filterPossiblePositions(Piece *piece) {
+    possiblePositions.clear();
+    switch (piece->getPieceType()) {
+        case BISHOP: filterBishopMoves(); break;
+        case ROOK: filterRookMoves(); break;
+        case QUEEN: filterBishopMoves(); filterRookMoves(); break;
+        case PAWN: filterPawnMoves(); break;
+    }
+}
+
+void MainWindow::filterBishopMoves() {
+    int x = positionFrom.first;
+    int y = positionFrom.second;
+    int dir[]={1,2,3,4,5,6,7};
+    bool f1 = true, f2 = true, f3 = true, f4 = true;
+    bool opponent = false;
+
+    for(int k = 0; k < 7; k++){
+        int newX = x+dir[k];
+        int newY = y+dir[k];
+        if((newX >= 0 && newX < 8) && (newY >= 0 && newY < 8) && f1){
+            pair<int,int> pos(newX, newY);
+            opponent = isOpponent(pos);
+            if(opponent || isEmpty(pos))
+                possiblePositions.push_back(pos);
+            else
+                f1 = false;
+            if(opponent)
+                f1 = false;
+
+        }
+        newX = x-dir[k];
+        newY = y-dir[k];
+        if((newX >= 0 && newX < 8) && (newY >= 0 && newY < 8) && f2){
+            pair<int,int> pos(newX, newY);
+            opponent = isOpponent(pos);
+            if(opponent || isEmpty(pos))
+                possiblePositions.push_back(pos);
+            else
+                f2 = false;
+            if(opponent)
+                f2 = false;
+        }
+        newX = x+dir[k];
+        newY = y-dir[k];
+        if((newX >= 0 && newX < 8) && (newY >= 0 && newY < 8) && f3){
+            pair<int,int> pos(newX, newY);
+            opponent = isOpponent(pos);
+            if(opponent || isEmpty(pos))
+                possiblePositions.push_back(pos);
+            else
+                f3 = false;
+            if(opponent)
+                f3 = false;
+        }
+        newX = x-dir[k];
+        newY = y+dir[k];
+        if((newX >= 0 && newX < 8) && (newY >= 0 && newY < 8) && f4){
+            pair<int,int> pos(newX, newY);
+            opponent = isOpponent(pos);
+            if(opponent || isEmpty(pos))
+                possiblePositions.push_back(pos);
+            else
+                f4 = false;
+            if(opponent)
+                f4 = false;
+        }
+    }
+}
+
+void MainWindow::filterRookMoves() {
+    int x = positionFrom.first;
+    int y = positionFrom.second;
+    int dir[]={1,2,3,4,5,6,7};
+    bool f1 = true, f2 = true, f3 = true, f4 = true;
+    bool opponent = false;
+
+    for(int k = 0; k < 7; k++) {
+        int newX = x+dir[k];
+        int newY = y;
+        if(newX >= 0 && newX < 8 && f1){
+            pair<int,int> pos(newX, newY);
+            opponent = isOpponent(pos);
+            if(opponent || isEmpty(pos))
+                possiblePositions.push_back(pos);
+            else
+                f1 = false;
+            if(opponent)
+                f1 = false;
+        }
+        newX = x-dir[k];
+        if(newX >= 0 && newX < 8 && f2){
+            pair<int,int> pos(newX, newY);
+            opponent = isOpponent(pos);
+            if(opponent || isEmpty(pos))
+                possiblePositions.push_back(pos);
+            else
+                f2 = false;
+            if(opponent)
+                f2 = false;
+        }
+        newX = x;
+        newY = y+dir[k];
+        if(newY >= 0 && newY < 8 && f3){
+            pair<int,int> pos(newX, newY);
+            opponent = isOpponent(pos);
+            if(opponent || isEmpty(pos))
+                possiblePositions.push_back(pos);
+            else
+                f3 = false;
+            if(opponent)
+                f3 = false;
+        }
+        newY = y-dir[k];
+        if(newY >= 0 && newY < 8 && f4){
+            pair<int,int> pos(newX, newY);
+            opponent = isOpponent(pos);
+            if(opponent || isEmpty(pos))
+                possiblePositions.push_back(pos);
+            else
+                f4 = false;
+            if(opponent)
+                f4 = false;
+        }
+    }
+}
+
+void MainWindow::filterPawnMoves() {
+    int x = positionFrom.first;
+    int y = positionFrom.second;
+    int dir[]={-1,0,1};
+
+    if(game->getCurrentMove() == BLACK){
+        for(int k = 0; k < 3; k++){
+            int newX = x+1;
+            int newY = y+dir[k];
+            if((newX >= 0 && newX < 8) && (newY >= 0 && newY < 8 )){
+                pair<int,int> pos(newX, newY);
+                if(isOpponent(pos) && newY != y)
+                    possiblePositions.push_back(pos);
+                else if(isEmpty(pos) && newY == y)
+                    possiblePositions.push_back(pos);
+            }
+        }
+
+        if(x == 1){
+            pair<int,int> pos(3, y);
+            if(isEmpty(pos))
+                possiblePositions.push_back(pos);
+        }
+    } else {
+        for(int k = 0; k < 3; k++){
+            int newX = x-1;
+            int newY = y+dir[k];
+            if((newX >= 0 && newX < 8) && (newY >= 0 && newY<8)){
+                pair<int,int> pos(newX, newY);
+                if(isOpponent(pos) && newY != y)
+                    possiblePositions.push_back(pos);
+                else if(isEmpty(pos) && newY == y)
+                    possiblePositions.push_back(pos);
+            }
+        }
+
+        if(x == 6){
+            pair<int,int> pos(4, y);
+            if(isEmpty(pos))
+                possiblePositions.push_back(pos);
+        }
+    }
 }
 
 void MainWindow::uncheckColors() {
@@ -149,7 +313,7 @@ void MainWindow::updateGame() {
     for(int i = 0; i < 8; i ++){
         for (int j = 0; j < 8; j ++) {
             QPushButton *btn = getClickedButton(i, j);
-            btn->setIcon(QIcon(QString::fromStdString(game->getField(i,j)->getIconName())));
+            btn->setIcon(QIcon(QString::fromStdString(game->getField(i,j)->getPiece()->getIconName())));
         }
     }
     setCurrentMoveLayout();
@@ -163,3 +327,4 @@ void MainWindow::setCurrentMoveLayout() {
     else
         turn->setIcon(QIcon(QString::fromStdString(":/img/right_arrow_white.png" )));
 }
+

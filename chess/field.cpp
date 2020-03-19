@@ -19,18 +19,6 @@ Piece* Field::getPiece() {
     return piece;
 }
 
-Color Field::getColor() {
-    return piece->getColor();
-}
-
-PieceType Field::getPieceType() {
-    return piece->getPieceType();
-}
-
-string Field::getIconName() {
-    return piece->getIconName();
-}
-
 vector<pair<int,int>> Field::getMoves(int x, int y) {
     return piece->getPossiblePieceMoves(x,y);
 }

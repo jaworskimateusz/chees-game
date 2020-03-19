@@ -14,6 +14,7 @@
 
 class Game {
 
+private:
     Color currentMove;
     vector<pair<int,int>> pieceMoves;
 public:
@@ -26,7 +27,6 @@ public:
     Color getCurrentMove();
     void setCurrentMove();
     void swapPiece(pair<int,int> previousPosition, pair<int,int> newPosition);
-    vector<pair<int,int>> getPieceMoves();
 };
 
 #endif // GAME_H

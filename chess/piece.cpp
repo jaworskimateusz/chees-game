@@ -8,16 +8,8 @@ Piece::~Piece() {
 
 }
 
-void Piece::setColor(Color color) {
-    this->color = color;
-}
-
 Color Piece::getColor() {
     return color;
-}
-
-void Piece::setPieceType(PieceType pieceType) {
-    this->pieceType = pieceType;
 }
 
 PieceType Piece::getPieceType() {

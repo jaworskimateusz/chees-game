@@ -41,7 +41,7 @@ Game::Game() {
 
         }
     }
-    currentMove = WHITE;
+    currentMove = BLACK;
 }
 
 Game::~Game() {
@@ -94,6 +94,3 @@ void Game::swapPiece(pair<int,int> previousPosition, pair<int,int> newPosition) 
    fields[x0][y0]->setPiece(new EmptyField(), INVISIBLE, EMPTY_FIELD, "");
 }
 
-vector<pair<int,int>> Game::getPieceMoves() {
-    return pieceMoves;
-}
