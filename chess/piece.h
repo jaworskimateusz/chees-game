@@ -7,7 +7,6 @@
 #include <string>
 #include <vector>
 
-
 using namespace std;
 
 class Piece {
@@ -26,6 +25,8 @@ public:
     string getIconName();
     void setIconName(string iconName);
     virtual vector<pair<int,int>> getPossiblePieceMoves(int x, int y);
+    bool isOpponent(pair<int,int> positionTo);
+    bool isEmpty(pair<int,int> positionTo);
 
 };
 

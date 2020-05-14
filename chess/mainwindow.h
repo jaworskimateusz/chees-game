@@ -19,7 +19,6 @@ class MainWindow : public QMainWindow {
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-    Game *game;
 private:
     Ui::MainWindow *ui;
     pair<int,int> positionFrom;
@@ -30,7 +29,6 @@ private slots:
     pair<int,int> getPosition(string s);
     bool isEmpty(pair<int,int> positionTo);
     bool hasMove();
-    void filterPossiblePositions(Piece* piece);
     void onFieldClick();
     void onButtonClick();
     bool isOpponent(pair<int,int> positionTo);
@@ -40,9 +38,6 @@ private slots:
     void colorPossibleMoves(vector<pair<int,int>> moves);
     void updateGame();
     void setCurrentMoveLayout();
-    void filterBishopMoves();
-    void filterRookMoves();
-    void filterPawnMoves();
 
 };
 #endif // MAINWINDOW_H

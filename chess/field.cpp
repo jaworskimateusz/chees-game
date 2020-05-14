@@ -22,3 +22,5 @@ Piece* Field::getPiece() {
 vector<pair<int,int>> Field::getMoves(int x, int y) {
     return piece->getPossiblePieceMoves(x,y);
 }
+
+
