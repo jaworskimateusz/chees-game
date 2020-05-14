@@ -11,13 +11,13 @@
 using namespace std;
 
 class Piece {
-    friend class Field;
+
 protected:
     vector<pair<int,int>> moves;
+public:
     Color color;
     PieceType pieceType;
     string iconName;
-public:
     Piece();
     ~Piece();
     Piece(Color color, PieceType pieceType, string iconName);

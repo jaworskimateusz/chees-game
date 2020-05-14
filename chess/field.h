@@ -4,7 +4,6 @@
 
 class Field {
 
-    friend class Piece;
 private:
     Piece *piece;
 public:
