@@ -1,0 +1,162 @@
+\hypertarget{class_game}{}\doxysection{Game Class Reference}
+\label{class_game}\index{Game@{Game}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_ad59df6562a58a614fda24622d3715b65}{Game}} ()
+\begin{DoxyCompactList}\small\item\em No-\/args constructor for \mbox{\hyperlink{class_game}{Game}} class. Here is created table of fields. Specific pieces are set in fields. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game_ae3d112ca6e0e55150d2fdbc704474530}{$\sim$\+Game}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \mbox{\hyperlink{class_game}{Game}} class. All initialized fields in table are deleted. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_field}{Field}} $\ast$ \mbox{\hyperlink{class_game_a83b1a59ff820067bc1f936773ea76e28}{get\+Field}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Get specific field. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_color_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}} \mbox{\hyperlink{class_game_a25e2726008396155c2f27f742642556b}{get\+Current\+Move}} ()
+\begin{DoxyCompactList}\small\item\em Get current move color. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_game_a2ab13a3be1b7de58174899538c21868a}{get\+Game\+Over}} ()
+\item 
+void \mbox{\hyperlink{class_game_a929c4b051000c20994aa75508f06e688}{set\+Game\+Over}} ()
+\begin{DoxyCompactList}\small\item\em Checks how many kings are in fields, true if kings $<$ 2. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_a7d88788cf4b0da39a0245d418aa6f37a}{end\+Game}} ()
+\begin{DoxyCompactList}\small\item\em Fills all fields with empty field. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_acdde5c09b9b2caba989e49fbfbfbe589}{set\+Current\+Move}} ()
+\begin{DoxyCompactList}\small\item\em Sets black or white piece move. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_a45bc61901104140cc9569b80f67dbf72}{swap\+Piece}} (pair$<$ int, int $>$ previous\+Position, pair$<$ int, int $>$ new\+Position)
+\begin{DoxyCompactList}\small\item\em Swapes two pieces, if piece is matted field is set to empty. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_game_a13334480fca012c644c7121ebb92a1d9}\label{class_game_a13334480fca012c644c7121ebb92a1d9}} 
+\mbox{\hyperlink{class_field}{Field}} $\ast$$\ast$$\ast$ {\bfseries fields}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_game_ad59df6562a58a614fda24622d3715b65}\label{class_game_ad59df6562a58a614fda24622d3715b65}} 
+\index{Game@{Game}!Game@{Game}}
+\index{Game@{Game}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{Game()}{Game()}}
+{\footnotesize\ttfamily Game\+::\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+No-\/args constructor for \mbox{\hyperlink{class_game}{Game}} class. Here is created table of fields. Specific pieces are set in fields. 
+
+\mbox{\Hypertarget{class_game_ae3d112ca6e0e55150d2fdbc704474530}\label{class_game_ae3d112ca6e0e55150d2fdbc704474530}} 
+\index{Game@{Game}!````~Game@{$\sim$Game}}
+\index{````~Game@{$\sim$Game}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{$\sim$Game()}{~Game()}}
+{\footnotesize\ttfamily Game\+::$\sim$\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor for \mbox{\hyperlink{class_game}{Game}} class. All initialized fields in table are deleted. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_game_a7d88788cf4b0da39a0245d418aa6f37a}\label{class_game_a7d88788cf4b0da39a0245d418aa6f37a}} 
+\index{Game@{Game}!endGame@{endGame}}
+\index{endGame@{endGame}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{endGame()}{endGame()}}
+{\footnotesize\ttfamily void Game\+::end\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Fills all fields with empty field. 
+
+\begin{DoxyReturn}{Returns}
+Void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_a25e2726008396155c2f27f742642556b}\label{class_game_a25e2726008396155c2f27f742642556b}} 
+\index{Game@{Game}!getCurrentMove@{getCurrentMove}}
+\index{getCurrentMove@{getCurrentMove}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{getCurrentMove()}{getCurrentMove()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_color_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}} Game\+::get\+Current\+Move (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get current move color. 
+
+\begin{DoxyReturn}{Returns}
+Returns piece color which turn is now 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_a83b1a59ff820067bc1f936773ea76e28}\label{class_game_a83b1a59ff820067bc1f936773ea76e28}} 
+\index{Game@{Game}!getField@{getField}}
+\index{getField@{getField}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{getField()}{getField()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_field}{Field}} $\ast$ Game\+::get\+Field (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Get specific field. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X-\/coordinate in field table \\
+\hline
+{\em y} & Y-\/coordinate in field table \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns specific field 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_a2ab13a3be1b7de58174899538c21868a}\label{class_game_a2ab13a3be1b7de58174899538c21868a}} 
+\index{Game@{Game}!getGameOver@{getGameOver}}
+\index{getGameOver@{getGameOver}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{getGameOver()}{getGameOver()}}
+{\footnotesize\ttfamily bool Game\+::get\+Game\+Over (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+Returns true if game is over 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_acdde5c09b9b2caba989e49fbfbfbe589}\label{class_game_acdde5c09b9b2caba989e49fbfbfbe589}} 
+\index{Game@{Game}!setCurrentMove@{setCurrentMove}}
+\index{setCurrentMove@{setCurrentMove}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{setCurrentMove()}{setCurrentMove()}}
+{\footnotesize\ttfamily void Game\+::set\+Current\+Move (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sets black or white piece move. 
+
+\begin{DoxyReturn}{Returns}
+Void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_a929c4b051000c20994aa75508f06e688}\label{class_game_a929c4b051000c20994aa75508f06e688}} 
+\index{Game@{Game}!setGameOver@{setGameOver}}
+\index{setGameOver@{setGameOver}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{setGameOver()}{setGameOver()}}
+{\footnotesize\ttfamily void Game\+::set\+Game\+Over (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks how many kings are in fields, true if kings $<$ 2. 
+
+\begin{DoxyReturn}{Returns}
+Void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_a45bc61901104140cc9569b80f67dbf72}\label{class_game_a45bc61901104140cc9569b80f67dbf72}} 
+\index{Game@{Game}!swapPiece@{swapPiece}}
+\index{swapPiece@{swapPiece}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{swapPiece()}{swapPiece()}}
+{\footnotesize\ttfamily void Game\+::swap\+Piece (\begin{DoxyParamCaption}\item[{pair$<$ int, int $>$}]{previous\+Position,  }\item[{pair$<$ int, int $>$}]{new\+Position }\end{DoxyParamCaption})}
+
+
+
+Swapes two pieces, if piece is matted field is set to empty. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em previous\+Position} & X,Y-\/coordinates of the previous piece position \\
+\hline
+{\em new\+Position} & X,Y-\/coordinates of the new piece position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{game_8h}{game.\+h}}\item 
+game.\+cpp\end{DoxyCompactItemize}

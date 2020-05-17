@@ -13,6 +13,12 @@ QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
 
+/**
+ *  @file   mainwindow.h
+ *  @brief  Main function for creating all logic, layout, moves
+ *  @author Mateusz Jaworski
+ *  @date   14-05-2020
+ ***********************************************/
 class MainWindow : public QMainWindow {
     Q_OBJECT
 

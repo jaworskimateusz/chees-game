@@ -1,0 +1,185 @@
+\hypertarget{class_piece}{}\doxysection{Piece Class Reference}
+\label{class_piece}\index{Piece@{Piece}}
+Inheritance diagram for Piece\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.951219cm]{class_piece}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_piece_ac57de5803bbad829b143bc7268267dc1}{Piece}} ()
+\begin{DoxyCompactList}\small\item\em No-\/args constructor for \mbox{\hyperlink{class_piece}{Piece}} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_piece_a5d7a4f6bade94cb33b6f634de8aa7918}{$\sim$\+Piece}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \mbox{\hyperlink{class_piece}{Piece}} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_piece_af708d76c4d58ef475c184486252d77cb}{Piece}} (\mbox{\hyperlink{_color_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}} color, \mbox{\hyperlink{_piece_type_8h_a12ed9719bbdf7bc596ff7a6f4bf3f021}{Piece\+Type}} piece\+Type, string icon\+Name)
+\begin{DoxyCompactList}\small\item\em Args constructor for piece class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_color_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}} \mbox{\hyperlink{class_piece_ad65707ed2f50e6d5fef41000395bc050}{get\+Color}} ()
+\item 
+\mbox{\hyperlink{_piece_type_8h_a12ed9719bbdf7bc596ff7a6f4bf3f021}{Piece\+Type}} \mbox{\hyperlink{class_piece_a4ccc4082dd03bb763c9d4cbc9843b7b6}{get\+Piece\+Type}} ()
+\item 
+string \mbox{\hyperlink{class_piece_a8fc66153a53ec099c457c73e1ead391d}{get\+Icon\+Name}} ()
+\item 
+virtual vector$<$ pair$<$ int, int $>$ $>$ \mbox{\hyperlink{class_piece_aa56d0759f453b97cbd9de464d913a1d9}{get\+Possible\+Piece\+Moves}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Method calculates possible moves for specific piece. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_piece_a479a45d9f671aaeac91d091838b25402}{is\+Opponent}} (pair$<$ int, int $>$ position\+To)
+\begin{DoxyCompactList}\small\item\em Method calculates if piece is opponent. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_piece_a403a66bdd10d736593f52a36d1b709d9}{is\+Empty}} (pair$<$ int, int $>$ position\+To)
+\begin{DoxyCompactList}\small\item\em Method calculates if field is empty. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_piece_a4cf5b29a9e13dcb93b616b11160c2abc}\label{class_piece_a4cf5b29a9e13dcb93b616b11160c2abc}} 
+\mbox{\hyperlink{_color_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}} {\bfseries color}
+\item 
+\mbox{\Hypertarget{class_piece_a9f0f7c60245e29d658b6434d5b9d25ac}\label{class_piece_a9f0f7c60245e29d658b6434d5b9d25ac}} 
+\mbox{\hyperlink{_piece_type_8h_a12ed9719bbdf7bc596ff7a6f4bf3f021}{Piece\+Type}} {\bfseries piece\+Type}
+\item 
+\mbox{\Hypertarget{class_piece_aeca40e64e43ebed11320ba1c5620efef}\label{class_piece_aeca40e64e43ebed11320ba1c5620efef}} 
+string {\bfseries icon\+Name}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_piece_a634a48df636e58e186ade81797bddfd8}\label{class_piece_a634a48df636e58e186ade81797bddfd8}} 
+vector$<$ pair$<$ int, int $>$ $>$ {\bfseries moves}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_piece_ac57de5803bbad829b143bc7268267dc1}\label{class_piece_ac57de5803bbad829b143bc7268267dc1}} 
+\index{Piece@{Piece}!Piece@{Piece}}
+\index{Piece@{Piece}!Piece@{Piece}}
+\doxysubsubsection{\texorpdfstring{Piece()}{Piece()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Piece\+::\+Piece (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+No-\/args constructor for \mbox{\hyperlink{class_piece}{Piece}} class. 
+
+\mbox{\Hypertarget{class_piece_a5d7a4f6bade94cb33b6f634de8aa7918}\label{class_piece_a5d7a4f6bade94cb33b6f634de8aa7918}} 
+\index{Piece@{Piece}!````~Piece@{$\sim$Piece}}
+\index{````~Piece@{$\sim$Piece}!Piece@{Piece}}
+\doxysubsubsection{\texorpdfstring{$\sim$Piece()}{~Piece()}}
+{\footnotesize\ttfamily Piece\+::$\sim$\+Piece (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor for \mbox{\hyperlink{class_piece}{Piece}} class. 
+
+\mbox{\Hypertarget{class_piece_af708d76c4d58ef475c184486252d77cb}\label{class_piece_af708d76c4d58ef475c184486252d77cb}} 
+\index{Piece@{Piece}!Piece@{Piece}}
+\index{Piece@{Piece}!Piece@{Piece}}
+\doxysubsubsection{\texorpdfstring{Piece()}{Piece()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Piece\+::\+Piece (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_color_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}}}]{color,  }\item[{\mbox{\hyperlink{_piece_type_8h_a12ed9719bbdf7bc596ff7a6f4bf3f021}{Piece\+Type}}}]{piece\+Type,  }\item[{string}]{icon\+Name }\end{DoxyParamCaption})}
+
+
+
+Args constructor for piece class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & color of the piece \\
+\hline
+{\em piece\+Type} & piece type \\
+\hline
+{\em icon\+Name} & path to icon \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_piece_ad65707ed2f50e6d5fef41000395bc050}\label{class_piece_ad65707ed2f50e6d5fef41000395bc050}} 
+\index{Piece@{Piece}!getColor@{getColor}}
+\index{getColor@{getColor}!Piece@{Piece}}
+\doxysubsubsection{\texorpdfstring{getColor()}{getColor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_color_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}} Piece\+::get\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+Returns color of the piece 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_piece_a8fc66153a53ec099c457c73e1ead391d}\label{class_piece_a8fc66153a53ec099c457c73e1ead391d}} 
+\index{Piece@{Piece}!getIconName@{getIconName}}
+\index{getIconName@{getIconName}!Piece@{Piece}}
+\doxysubsubsection{\texorpdfstring{getIconName()}{getIconName()}}
+{\footnotesize\ttfamily string Piece\+::get\+Icon\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+Returns path co icon 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_piece_a4ccc4082dd03bb763c9d4cbc9843b7b6}\label{class_piece_a4ccc4082dd03bb763c9d4cbc9843b7b6}} 
+\index{Piece@{Piece}!getPieceType@{getPieceType}}
+\index{getPieceType@{getPieceType}!Piece@{Piece}}
+\doxysubsubsection{\texorpdfstring{getPieceType()}{getPieceType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_piece_type_8h_a12ed9719bbdf7bc596ff7a6f4bf3f021}{Piece\+Type}} Piece\+::get\+Piece\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+Returns piece type 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_piece_aa56d0759f453b97cbd9de464d913a1d9}\label{class_piece_aa56d0759f453b97cbd9de464d913a1d9}} 
+\index{Piece@{Piece}!getPossiblePieceMoves@{getPossiblePieceMoves}}
+\index{getPossiblePieceMoves@{getPossiblePieceMoves}!Piece@{Piece}}
+\doxysubsubsection{\texorpdfstring{getPossiblePieceMoves()}{getPossiblePieceMoves()}}
+{\footnotesize\ttfamily vector$<$ pair$<$ int, int $>$ $>$ Piece\+::get\+Possible\+Piece\+Moves (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Method calculates possible moves for specific piece. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X-\/coordinate in field table \\
+\hline
+{\em y} & Y-\/coordinate in field table \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns vector of points where piece can move 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_bishop_a404269163f267d2e6cce3241af341ee8}{Bishop}}, \mbox{\hyperlink{class_king_a0117c14f491bf781e29d64db2d12bf77}{King}}, \mbox{\hyperlink{class_knight_acdb7fdecaed0a466beb618eb56cfaeeb}{Knight}}, \mbox{\hyperlink{class_pawn_a754bcf8ae09f4cfdff59490a809afed0}{Pawn}}, \mbox{\hyperlink{class_rook_ab784d457c609b9bbd719a54cf6b3a0f7}{Rook}}, \mbox{\hyperlink{class_queen_aef79407afcf2ca8100e081942cb83bb9}{Queen}}, and \mbox{\hyperlink{class_empty_field_aba0f2482923abbe2ded11244ee0c22e6}{Empty\+Field}}.
+
+\mbox{\Hypertarget{class_piece_a403a66bdd10d736593f52a36d1b709d9}\label{class_piece_a403a66bdd10d736593f52a36d1b709d9}} 
+\index{Piece@{Piece}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!Piece@{Piece}}
+\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}}
+{\footnotesize\ttfamily bool Piece\+::is\+Empty (\begin{DoxyParamCaption}\item[{pair$<$ int, int $>$}]{position\+To }\end{DoxyParamCaption})}
+
+
+
+Method calculates if field is empty. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position\+To} & pair of X and Y coordinate in field table \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if on specific piece position in field table piece is empty\+Field 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_piece_a479a45d9f671aaeac91d091838b25402}\label{class_piece_a479a45d9f671aaeac91d091838b25402}} 
+\index{Piece@{Piece}!isOpponent@{isOpponent}}
+\index{isOpponent@{isOpponent}!Piece@{Piece}}
+\doxysubsubsection{\texorpdfstring{isOpponent()}{isOpponent()}}
+{\footnotesize\ttfamily bool Piece\+::is\+Opponent (\begin{DoxyParamCaption}\item[{pair$<$ int, int $>$}]{position\+To }\end{DoxyParamCaption})}
+
+
+
+Method calculates if piece is opponent. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position\+To} & pair of X and Y coordinate in field table \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if on specific piece position in field table opponent is set 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{piece_8h}{piece.\+h}}\item 
+piece.\+cpp\end{DoxyCompactItemize}

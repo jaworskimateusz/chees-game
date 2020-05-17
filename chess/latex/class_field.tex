@@ -1,0 +1,100 @@
+\hypertarget{class_field}{}\doxysection{Field Class Reference}
+\label{class_field}\index{Field@{Field}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_field_a3e804c92273d9159f413f227b535c672}{Field}} ()
+\begin{DoxyCompactList}\small\item\em No-\/args empty constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_field_a45d6e6d09b8f8e46de62b40119d62c60}{$\sim$\+Field}} ()
+\begin{DoxyCompactList}\small\item\em Empty destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_field_a87135b34d7314e3b1c56956fce2ebfb1}{set\+Piece}} (\mbox{\hyperlink{class_piece}{Piece}} $\ast$piece, \mbox{\hyperlink{_color_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}} color, \mbox{\hyperlink{_piece_type_8h_a12ed9719bbdf7bc596ff7a6f4bf3f021}{Piece\+Type}} piece\+Type, string icon\+Name)
+\begin{DoxyCompactList}\small\item\em Sets specific piece on a field. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_piece}{Piece}} $\ast$ \mbox{\hyperlink{class_field_ac969d5cffa184ecdf951b6b8cbf1f204}{get\+Piece}} ()
+\begin{DoxyCompactList}\small\item\em Get specific pointer to piece. \end{DoxyCompactList}\item 
+vector$<$ pair$<$ int, int $>$ $>$ \mbox{\hyperlink{class_field_afededb3159d47351fa5dc69e20708beb}{get\+Moves}} (int x, int y)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_field_a3e804c92273d9159f413f227b535c672}\label{class_field_a3e804c92273d9159f413f227b535c672}} 
+\index{Field@{Field}!Field@{Field}}
+\index{Field@{Field}!Field@{Field}}
+\doxysubsubsection{\texorpdfstring{Field()}{Field()}}
+{\footnotesize\ttfamily Field\+::\+Field (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+No-\/args empty constructor. 
+
+\mbox{\Hypertarget{class_field_a45d6e6d09b8f8e46de62b40119d62c60}\label{class_field_a45d6e6d09b8f8e46de62b40119d62c60}} 
+\index{Field@{Field}!````~Field@{$\sim$Field}}
+\index{````~Field@{$\sim$Field}!Field@{Field}}
+\doxysubsubsection{\texorpdfstring{$\sim$Field()}{~Field()}}
+{\footnotesize\ttfamily Field\+::$\sim$\+Field (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Empty destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_field_afededb3159d47351fa5dc69e20708beb}\label{class_field_afededb3159d47351fa5dc69e20708beb}} 
+\index{Field@{Field}!getMoves@{getMoves}}
+\index{getMoves@{getMoves}!Field@{Field}}
+\doxysubsubsection{\texorpdfstring{getMoves()}{getMoves()}}
+{\footnotesize\ttfamily vector$<$ pair$<$ int, int $>$ $>$ Field\+::get\+Moves (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X-\/coordinate in field table \\
+\hline
+{\em y} & Y-\/coordinate in field table \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns vector of points where piece can move 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_field_ac969d5cffa184ecdf951b6b8cbf1f204}\label{class_field_ac969d5cffa184ecdf951b6b8cbf1f204}} 
+\index{Field@{Field}!getPiece@{getPiece}}
+\index{getPiece@{getPiece}!Field@{Field}}
+\doxysubsubsection{\texorpdfstring{getPiece()}{getPiece()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_piece}{Piece}} $\ast$ Field\+::get\+Piece (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get specific pointer to piece. 
+
+\begin{DoxyReturn}{Returns}
+Returns specific pointer to piece 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_field_a87135b34d7314e3b1c56956fce2ebfb1}\label{class_field_a87135b34d7314e3b1c56956fce2ebfb1}} 
+\index{Field@{Field}!setPiece@{setPiece}}
+\index{setPiece@{setPiece}!Field@{Field}}
+\doxysubsubsection{\texorpdfstring{setPiece()}{setPiece()}}
+{\footnotesize\ttfamily void Field\+::set\+Piece (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_piece}{Piece}} $\ast$}]{piece,  }\item[{\mbox{\hyperlink{_color_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}}}]{color,  }\item[{\mbox{\hyperlink{_piece_type_8h_a12ed9719bbdf7bc596ff7a6f4bf3f021}{Piece\+Type}}}]{piece\+Type,  }\item[{string}]{icon\+Name }\end{DoxyParamCaption})}
+
+
+
+Sets specific piece on a field. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$piece} & pointer to piece \\
+\hline
+{\em color} & color of the piece \\
+\hline
+{\em piece\+Type} & piece type \\
+\hline
+{\em icon\+Name} & path to icon \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{field_8h}{field.\+h}}\item 
+field.\+cpp\end{DoxyCompactItemize}
