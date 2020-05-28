@@ -10,9 +10,9 @@ Field::~Field() {
 
 void Field::setPiece(Piece *p, Color color, PieceType pieceType, string iconName ) {
     piece = p;
-    piece->color = color;
-    piece->pieceType = pieceType;
-    piece->iconName = iconName;
+    piece->setColor(color);
+    piece->setPieceType(pieceType);
+    piece->setIconName(iconName);
 }
 
 Piece* Field::getPiece() {

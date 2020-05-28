@@ -70,26 +70,25 @@ void Game::swapPiece(pair<int,int> previousPosition, pair<int,int> newPosition) 
     int x = newPosition.first;
     int y = newPosition.second;
 
-    PieceType pieceType = fields[x0][y0]->getPiece()->getPieceType();
+    Piece* ptr = fields[x0][y0]->getPiece();
     Color color = fields[x0][y0]->getPiece()->getColor();
     string _white = color == WHITE ? "_white.png" : ".png";
 
-    switch(pieceType) {
-        case EMPTY_FIELD:
-            fields[x][y]->setPiece(new EmptyField(), INVISIBLE, EMPTY_FIELD, ""); break;
-        case PAWN:
-            fields[x][y]->setPiece(new Pawn(), color, PAWN, ":/img/pawn" + _white); break;
-        case KNIGHT:
-            fields[x][y]->setPiece(new Knight(), color, KNIGHT, ":/img/knight" + _white); break;
-        case BISHOP:
-            fields[x][y]->setPiece(new Bishop(), color, BISHOP, ":/img/bishop" + _white); break;
-        case KING:
-            fields[x][y]->setPiece(new King(), color, KING, ":/img/king" + _white); break;
-        case QUEEN:
-            fields[x][y]->setPiece(new Queen(), color, QUEEN, ":/img/queen" + _white); break;
-        case ROOK:
-            fields[x][y]->setPiece(new Rook(), color, ROOK, ":/img/rook" + _white); break;
-    }
+       if (dynamic_cast<EmptyField*>(ptr))
+            fields[x][y]->setPiece(new EmptyField(), INVISIBLE, EMPTY_FIELD, "");
+       if (dynamic_cast<Pawn*>(ptr))
+            fields[x][y]->setPiece(new Pawn(), color, PAWN, ":/img/pawn" + _white);
+       if (dynamic_cast<Knight*>(ptr))
+            fields[x][y]->setPiece(new Knight(), color, KNIGHT, ":/img/knight" + _white);
+       if (dynamic_cast<Bishop*>(ptr))
+            fields[x][y]->setPiece(new Bishop(), color, BISHOP, ":/img/bishop" + _white);
+       if (dynamic_cast<King*>(ptr))
+            fields[x][y]->setPiece(new King(), color, KING, ":/img/king" + _white);
+       if (dynamic_cast<Queen*>(ptr))
+            fields[x][y]->setPiece(new Queen(), color, QUEEN, ":/img/queen" + _white);
+       if (dynamic_cast<Rook*>(ptr))
+            fields[x][y]->setPiece(new Rook(), color, ROOK, ":/img/rook" + _white);
+
 
    setGameOver();
    fields[x0][y0]->setPiece(new EmptyField(), INVISIBLE, EMPTY_FIELD, "");
@@ -101,9 +100,9 @@ bool Game::getGameOver() {
 
 void Game::setGameOver() {
     int kings = 0;
-    for(int i = 0; i < 8 ;i++) {
-        for(int j = 0; j < 8 ;j++){
-            if(getField(i,j)->getPiece()->getPieceType() == KING) {
+    for (int i = 0; i < 8 ;i++) {
+        for (int j = 0; j < 8 ;j++){
+            if (dynamic_cast<King*>(getField(i,j)->getPiece())) {
                 kings++;
             }
             if(kings == 2) {
@@ -112,7 +111,7 @@ void Game::setGameOver() {
             }
         }
     }
-    if(kings < 2)
+    if (kings < 2)
         this->isGameOver = true;
 }
 

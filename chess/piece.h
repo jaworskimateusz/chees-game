@@ -16,13 +16,14 @@ using namespace std;
  *  @date   14-05-2020
  ***********************************************/
 class Piece {
-
-protected:
-    vector<pair<int,int>> moves;
-public:
+private:
     Color color;
     PieceType pieceType;
     string iconName;
+protected:
+    vector<pair<int,int>> moves;
+public:
+
     /**
      *  @brief No-args constructor for Piece class
      ***********************************************/
@@ -50,6 +51,21 @@ public:
      *  @return Returns path co icon
      ***********************************************/
     string getIconName();
+    /**
+     *  @brief Method set piece color
+     *  @return void
+     ***********************************************/
+    void setColor(Color color);
+    /**
+     *  @brief Method set piece type
+     *  @return void
+     ***********************************************/
+    void setPieceType(PieceType pieceType);
+    /**
+     *  @brief Method set piece icon name
+     *  @return void
+     ***********************************************/
+    void setIconName(string iconName);
     /**
      *  @brief Method calculates possible moves for specific piece
      *  @param x X-coordinate in field table

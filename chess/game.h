@@ -24,7 +24,6 @@ private:
     Color currentMove;
     vector<pair<int,int>> pieceMoves;
     bool isGameOver = false;
-public:
     Field ***fields;
 public:
     /**

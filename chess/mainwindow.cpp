@@ -62,7 +62,7 @@ void MainWindow::onFieldClick() {
 }
 
 bool MainWindow::isEmpty(pair<int,int> positionTo) {
-    if(game->getField(positionTo.first, positionTo.second)->getPiece()->getPieceType() == EMPTY_FIELD)
+    if (dynamic_cast<EmptyField*>(game->getField(positionTo.first, positionTo.second)->getPiece()))
         return true;
     return false;
 }

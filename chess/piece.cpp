@@ -14,12 +14,24 @@ Color Piece::getColor() {
     return color;
 }
 
+void Piece::setColor(Color color) {
+    this->color = color;
+}
+
 PieceType Piece::getPieceType() {
     return pieceType;
 }
 
+void Piece::setPieceType(PieceType pieceType) {
+    this->pieceType = pieceType;
+}
+
 string Piece::getIconName() {
     return iconName;
+}
+
+void Piece::setIconName(string iconName) {
+    this->iconName = iconName;
 }
 
 vector<pair<int,int>> Piece::getPossiblePieceMoves(int x, int y) {
