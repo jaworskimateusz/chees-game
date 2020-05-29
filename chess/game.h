@@ -1,7 +1,6 @@
 #ifndef GAME_H
 #define GAME_H
 
-#include "field.h"
 #include "pawn.h"
 #include "emptyfield.h"
 #include "rook.h"
@@ -10,6 +9,7 @@
 #include "queen.h"
 #include "king.h"
 #include "Color.h"
+#include "board.h"
 
 /**
  *  @file   game.h
@@ -23,23 +23,16 @@ private:
     Color currentMove;
     vector<pair<int,int>> pieceMoves;
     bool isGameOver = false;
-    Field ***fields;
+    Board * board;
 public:
     /**
-     *  @brief No-args constructor for Game class. Here is created table of fields. Specific pieces are set in fields
+     *  @brief No-args constructor for Game class. Here board is created.
      ***********************************************/
     Game();
     /**
      *  @brief Destructor for Game class. All initialized fields in table are deleted.
      ***********************************************/
     ~Game();
-    /**
-     *  @brief Get specific field
-     *  @param x X-coordinate in field table
-     *  @param y Y-coordinate in field table
-     *  @return Returns specific field
-     ***********************************************/
-    Field *getField(int x, int y);
     /**
      *  @brief Get current move color
      *  @return Returns piece color which turn is now
@@ -50,7 +43,7 @@ public:
      ***********************************************/
     bool getGameOver();
     /**
-     *  @brief Checks how many kings are in fields, true if kings < 2
+     *  @brief Sets game over flag
      *  @return Void
      ***********************************************/
     void setGameOver();
@@ -65,12 +58,10 @@ public:
      ***********************************************/
     void setCurrentMove();
     /**
-     *  @brief Swapes two pieces, if piece is matted field is set to empty
-     *  @param previousPosition X,Y-coordinates of the previous piece position
-     *  @param newPosition X,Y-coordinates of the new piece position
-     *  @return Void
+     *  @brief Get current board
+     *  @return Returns board
      ***********************************************/
-    void swapPiece(pair<int,int> previousPosition, pair<int,int> newPosition);
+    Board* getBoard();
 };
 
 #endif // GAME_H

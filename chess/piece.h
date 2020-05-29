@@ -1,6 +1,6 @@
 #ifndef PIECE_H
 #define PIECE_H
-#include "position.h"
+
 #include "Color.h"
 #include <stdio.h>
 #include <string>

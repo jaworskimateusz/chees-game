@@ -19,7 +19,7 @@ MainWindow::MainWindow(QWidget *parent)
         for (int j = 0; j < 8; j ++) {
             QPushButton *btn = getClickedButton(i, j);
             btn->setIcon(QIcon(""));
-            btn->setIcon(QIcon(QString::fromStdString(game->getField(i,j)->getPiece()->getIconName())));
+            btn->setIcon(QIcon(QString::fromStdString(game->getBoard()->getField(i,j)->getPiece()->getIconName())));
             connect(btn, SIGNAL(released()),this,SLOT(onFieldClick()));
         }
     }
@@ -36,7 +36,7 @@ void MainWindow::onFieldClick() {
     QPushButton *field = (QPushButton *)sender();
     qDebug() << field->objectName();
     pair<int,int> position = getPosition(field->objectName().toStdString());
-    Field * f = game->getField(position.first, position.second);
+    Field * f = game->getBoard()->getField(position.first, position.second);
 
     if(game->getCurrentMove() == f->getPiece()->getColor() || isClicked) {
         if(!isClicked) {
@@ -49,10 +49,12 @@ void MainWindow::onFieldClick() {
         } else { 
             positionTo = position;
             if(isEmpty(positionTo) && hasMove()) {
-                game->swapPiece(positionFrom, positionTo);
+                game->getBoard()->swapPiece(positionFrom, positionTo);
+                game->setGameOver();
                 updateGame();
             } else if (isOpponent(positionTo) && hasMove()) {
-                game->swapPiece(positionFrom, positionTo);
+                game->getBoard()->swapPiece(positionFrom, positionTo);
+                game->setGameOver();
                 updateGame();
             }
             isClicked = false;
@@ -62,7 +64,7 @@ void MainWindow::onFieldClick() {
 }
 
 bool MainWindow::isEmpty(pair<int,int> positionTo) {
-    if (dynamic_cast<EmptyField*>(game->getField(positionTo.first, positionTo.second)->getPiece()))
+    if (dynamic_cast<EmptyField*>(game->getBoard()->getField(positionTo.first, positionTo.second)->getPiece()))
         return true;
     return false;
 }
@@ -74,7 +76,7 @@ bool MainWindow::hasMove() {
 }
 
 bool MainWindow::isOpponent(pair<int,int> positionTo) {
-    Color c = game->getField(positionTo.first, positionTo.second)->getPiece()->getColor();
+    Color c = game->getBoard()->getField(positionTo.first, positionTo.second)->getPiece()->getColor();
     if(c != game->getCurrentMove() && c != INVISIBLE)
         return true;
     return false;
@@ -130,7 +132,7 @@ void MainWindow::updateGame() {
     for(int i = 0; i < 8; i ++){
         for (int j = 0; j < 8; j ++) {
             QPushButton *btn = getClickedButton(i, j);
-            btn->setIcon(QIcon(QString::fromStdString(game->getField(i,j)->getPiece()->getIconName())));
+            btn->setIcon(QIcon(QString::fromStdString(game->getBoard()->getField(i,j)->getPiece()->getIconName())));
         }
     }
     isGameOver();

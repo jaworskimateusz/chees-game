@@ -17,6 +17,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     bishop.cpp \
+    board.cpp \
     emptyfield.cpp \
     field.cpp \
     game.cpp \
@@ -32,6 +33,7 @@ SOURCES += \
 HEADERS += \
     Color.h \
     bishop.h \
+    board.h \
     emptyfield.h \
     field.h \
     game.h \

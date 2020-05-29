@@ -31,14 +31,14 @@ vector<pair<int,int>> Piece::getPossiblePieceMoves(int x, int y) {
 }
 
 bool Piece::isOpponent(pair<int,int> positionTo) {
-    Color c = game->getField(positionTo.first, positionTo.second)->getPiece()->getColor();
+    Color c = game->getBoard()->getField(positionTo.first, positionTo.second)->getPiece()->getColor();
     if(c != game->getCurrentMove() && c != INVISIBLE)
         return true;
     return false;
 }
 
 bool Piece::isEmpty(pair<int,int> positionTo) {
-    if (dynamic_cast<EmptyField*>(game->getField(positionTo.first, positionTo.second)->getPiece()))
+    if (dynamic_cast<EmptyField*>(game->getBoard()->getField(positionTo.first, positionTo.second)->getPiece()))
         return true;
     return false;
 }
