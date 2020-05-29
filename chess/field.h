@@ -25,11 +25,10 @@ public:
      *  @brief Sets specific piece on a field
      *  @param *piece pointer to piece
      *  @param color color of the piece
-     *  @param pieceType piece type
      *  @param iconName path to icon
      *  @return Void
      ***********************************************/
-    void setPiece(Piece *piece, Color color, PieceType pieceType, string iconName);
+    void setPiece(Piece *piece, Color color, string iconName);
     /**
      *  @brief Get specific pointer to piece
      *  @return Returns specific pointer to piece

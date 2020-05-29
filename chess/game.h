@@ -9,7 +9,6 @@
 #include "knight.h"
 #include "queen.h"
 #include "king.h"
-#include "PieceType.h"
 #include "Color.h"
 
 /**

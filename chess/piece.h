@@ -1,7 +1,6 @@
 #ifndef PIECE_H
 #define PIECE_H
 #include "position.h"
-#include "PieceType.h"
 #include "Color.h"
 #include <stdio.h>
 #include <string>
@@ -18,7 +17,6 @@ using namespace std;
 class Piece {
 private:
     Color color;
-    PieceType pieceType;
     string iconName;
 protected:
     vector<pair<int,int>> moves;
@@ -35,18 +33,13 @@ public:
     /**
      *  @brief Args constructor for piece class.
      *  @param color color of the piece
-     *  @param pieceType piece type
      *  @param iconName path to icon
      ***********************************************/
-    Piece(Color color, PieceType pieceType, string iconName);
+    Piece(Color color, string iconName);
     /**
      *  @return Returns color of the piece
      ***********************************************/
     Color getColor();
-    /**
-     *  @return Returns piece type
-     ***********************************************/
-    PieceType getPieceType();
     /**
      *  @return Returns path co icon
      ***********************************************/
@@ -56,11 +49,6 @@ public:
      *  @return void
      ***********************************************/
     void setColor(Color color);
-    /**
-     *  @brief Method set piece type
-     *  @return void
-     ***********************************************/
-    void setPieceType(PieceType pieceType);
     /**
      *  @brief Method set piece icon name
      *  @return void

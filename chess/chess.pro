@@ -31,7 +31,6 @@ SOURCES += \
 
 HEADERS += \
     Color.h \
-    PieceType.h \
     bishop.h \
     emptyfield.h \
     field.h \

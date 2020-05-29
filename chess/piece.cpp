@@ -18,14 +18,6 @@ void Piece::setColor(Color color) {
     this->color = color;
 }
 
-PieceType Piece::getPieceType() {
-    return pieceType;
-}
-
-void Piece::setPieceType(PieceType pieceType) {
-    this->pieceType = pieceType;
-}
-
 string Piece::getIconName() {
     return iconName;
 }
@@ -46,7 +38,7 @@ bool Piece::isOpponent(pair<int,int> positionTo) {
 }
 
 bool Piece::isEmpty(pair<int,int> positionTo) {
-    if(game->getField(positionTo.first, positionTo.second)->getPiece()->getPieceType() == EMPTY_FIELD)
+    if (dynamic_cast<EmptyField*>(game->getField(positionTo.first, positionTo.second)->getPiece()))
         return true;
     return false;
 }
