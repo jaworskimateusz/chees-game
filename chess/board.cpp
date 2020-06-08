@@ -38,6 +38,14 @@ Board::Board() {
                  fields[i][j]->setPiece(new Pawn(), WHITE, ":/img/pawn_white.png");
              if(i > 1 && i < 6)
                  fields[i][j]->setPiece(new EmptyField(), INVISIBLE, "");
+             if (i == 1 && j==7)
+                 fields[i][j]->setPiece(new PawnKnight(), BLACK, ":/img/pawn.png");
+             if (i == 1 && j==0)
+                 fields[i][j]->setPiece(new PawnKnight(), BLACK, ":/img/pawn.png");
+             if (i == 6 && j==0)
+                 fields[i][j]->setPiece(new PawnKnight(), WHITE, ":/img/pawn_white.png");
+             if (i == 6 && j==7)
+                 fields[i][j]->setPiece(new PawnKnight(), WHITE, ":/img/pawn_white.png");
 
         }
     }

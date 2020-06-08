@@ -26,6 +26,7 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     pawn.cpp \
+    pawnknight.cpp \
     piece.cpp \
     queen.cpp \
     rook.cpp
@@ -41,6 +42,7 @@ HEADERS += \
     knight.h \
     mainwindow.h \
     pawn.h \
+    pawnknight.h \
     piece.h \
     queen.h \
     rook.h

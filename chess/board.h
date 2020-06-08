@@ -10,6 +10,7 @@
 #include "queen.h"
 #include "king.h"
 #include "Color.h"
+#include "pawnknight.h"
 
 /**
  *  @file   board.h
